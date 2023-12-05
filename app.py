@@ -42,7 +42,7 @@ def index():
             ip_address = get_ip_address()
             append_to_csv([legacy_account_number, new_account_number, ip_address], output_csv_path)
             # Use Markup to safely render HTML content
-            message = Markup(f'Your new account number is: <a href="https://myaccount.cityofcarrollton.com/register?account={new_account_number}">{new_account_number}</a>')
+            message = Markup(f'Copy and then click on your new account number to jump to the portal and complete account set up.<br>Your new account number is: <a href="https://myaccount.cityofcarrollton.com/register?account={new_account_number}">{new_account_number}</a>')
             flash(message)
             return redirect('/')
         else:
@@ -139,7 +139,7 @@ def index():
           {% endif %}
         {% endwith %}
         <form action="/" method="post">
-            <label for="legacy_account_number">Enter your current account number:</label>
+            <label for="legacy_account_number">Enter your current account number:<br>Example, “1234567-12345”</label>
             <input type="text" id="legacy_account_number" name="legacy_account_number" required>
             <input type="submit" value="Lookup">
         </form>
