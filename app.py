@@ -1,15 +1,13 @@
 from flask import Flask, request, render_template_string, flash, redirect
+from markupsafe import Markup
 import csv
-import socket
 
 app = Flask(__name__)
-# Replace 'supersecretkey' with a real secret key
+# Replace 'supersecretkey' with a real secret key for production
 app.secret_key = 'supersecretkey'
 
 # Function to get the user's IP address
-
-
-def get_ip_address(request):
+def get_ip_address():
     if request.headers.getlist("X-Forwarded-For"):
         ip_address = request.headers.getlist("X-Forwarded-For")[0]
     else:
@@ -17,8 +15,6 @@ def get_ip_address(request):
     return ip_address
 
 # Function to search for the new account number in the CSV file
-
-
 def find_new_account_number(legacy_account_number, csv_path):
     with open(csv_path, mode='r', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
@@ -28,36 +24,31 @@ def find_new_account_number(legacy_account_number, csv_path):
     return None
 
 # Function to append data to a CSV file
-
-
 def append_to_csv(data, output_csv_path):
     with open(output_csv_path, mode='a', newline='') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(data)
 
 # Flask route for the home page with the form
-
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
         legacy_account_number = request.form.get('legacy_account_number')
-        csv_path = 'CAR Cross Reference.csv'  # Make sure this path is correct
-        output_csv_path = 'output_data.csv'  # Make sure this path is correct
-        new_account_number = find_new_account_number(
-            legacy_account_number, csv_path)
+        csv_path = 'CAR Cross Reference.csv'  # Ensure this path is correct
+        output_csv_path = 'output_data.csv'  # Ensure this path is correct
+        new_account_number = find_new_account_number(legacy_account_number, csv_path)
 
         if new_account_number:
-            ip_address = get_ip_address(request)
-            append_to_csv(
-                [legacy_account_number, new_account_number, ip_address], output_csv_path)
-            flash(f'Your new account number is: <a href="https://myaccount.cityofcarrollton.com/register">{new_account_number}</a>')
+            ip_address = get_ip_address()
+            append_to_csv([legacy_account_number, new_account_number, ip_address], output_csv_path)
+            # Use Markup to safely render HTML content
+            message = Markup(f'Your new account number is: <a href="https://myaccount.cityofcarrollton.com/register?account={new_account_number}">{new_account_number}</a>')
+            flash(message)
             return redirect('/')
         else:
             flash('Invalid account number. Please try again.')
             return redirect('/')
 
-    # The HTML for the form is embedded directly in the render_template_string call for simplicity
     return render_template_string("""
 <!DOCTYPE html>
 <html lang="en">
