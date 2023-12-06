@@ -123,6 +123,12 @@ def index():
             text-align: center;
         }
     </style>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeXfycpAAAAANQmIfdgF7BuhPfxXgMCTD7EgxNc"></script>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("lookupForm").submit();
+      }
+    </script>
 </head>
 <body>
 
@@ -138,11 +144,17 @@ def index():
             </div>
           {% endif %}
         {% endwith %}
-        <form action="/" method="post">
+        <form id="lookupForm" action="/" method="post">
             <label for="legacy_account_number">Enter your current account number, including the dash:<br>Example, “1234567-12345”</label>
             <input type="text" id="legacy_account_number" name="legacy_account_number" required>
             <input type="submit" value="Lookup">
         </form>
+        <div style="display: none">
+            <button class="g-recaptcha"
+                data-sitekey="6LeXfycpAAAAANQmIfdgF7BuhPfxXgMCTD7EgxNc"
+                data-callback='onSubmit'
+                data-action='submit'>Lookup</button>    
+        </div>
         <div id="existingAccount" style="margin-top: 20px;text-align: center;">Already have an account? Click <a href="https://myaccount.cityofcarrollton.com/">here</a> to log in.</div>
     </div>
 </body>
