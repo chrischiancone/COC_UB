@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "vertexone-398118",
+  "private_key_id": "79d257f259614100f0173aa8b42ba2be3092d3a4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCzcsfO/nopUZ3l\nAaIiUmqSmXnBI+4r++Wk6TFkdc7bz5jU6TLB+vwNyzr5SCwzZQ+R3+gXfjm/UCt4\nbS9FpgkZnoN3KTOafQBeZVmai1f75lERChuH2gBTVekuSfXx0+NXpp1mJpKocBs/\nMaDCwNvzbY1u2j+WTzpgY9S3bNalMOWy1ZCOrwn6QhMDHFXlxh02DOxF36D4ayHO\nKr5gNkq9lGvGRm3Jkpfi5kD8SBojik360OM3Hu/9/eshfVNVCTdNjscTQQKdKkNf\nyd6zZGh8jU/B6DfCyBvXteSPExy0IrYqjqb9SJgY89pdDVa+vwqKmGjZ92/eX6Ou\nAPaRuR/dAgMBAAECggEABSba8KjipfQHZe81kemu0JWiZraa3F1neuQM/HbbYPkl\nSJuHTwVfHiBDCawWRMV2fHgiqCYCD2mETflIfaXmJfukh5PBvQIwtAUR3Pt6I6u5\nkRUqtCxAjSPuxVrvOimcocQRScD6veY2CgrpNB4oUmVHRbLzV2Pf56uGDFwOD4D7\nDvBFQpAymb3Rv+3Z3xUN4PjOCKg8wfQc4lNuQAyw20NXjpTDcJ0fOxMh7utMinOE\ni0YRbyffcwPd8Kxsc8u958ScbJCtvBQIuEZULf41l5np3Xc0SWhKKM/gMbrJ22GW\ncK3aaL/a8/h4E7SGjMjNHBtXt8/KDfEJF4V88dB72wKBgQDdlQlpPLvwgeHyRsX9\nva0XgnbILdsNahSNXz9ar1k+3bclROJZ2inm2SXEbkLMFvhN798bbQLRN2I6GOrM\neTwzut1TZ6zjXzytnzmUpt49Yr4cbQYBzPHzAk6qWHU8KSnQUeOQX7ihq/MZiqg8\nxoPiCBXiaR7TBpyrHyobZ4NmkwKBgQDPUlcufGgXGPBsJehMMTlXm2kakx3lPCyx\n5iJ76Zv0I1Ls2exopnizMDU58g/9vRoy0navMyz6Qi1aBDynnp1dcL5Z/6aV67XT\nwRnr/I1MzUYfe6bagv145F1/hb0o1idjH3LQmQlNUylt3lq53jIOd21kM0b6FOi5\nNqkTdAh1zwKBgDs9KgvxiclN4As2sp4YxJrhbUItSD/42U/GZBipgnGVMu6K0Pz2\nn3cxHLC8Ta1kgrPLallZtoQai28+1B8gVmD6F0vCDu2mu4ErbWh5iDbfHDZbS1zV\n3uV5+2/9QDJ6Ssx/6BfkD2dhohd1A29kH0Qhp0AlnHEMdnwlU8uJzA5zAoGBAKeO\nreVlKJ9aSZ2ueXNy6RxT/3s54ZSOsLTLAZ3SLXgAQJoqerYNrUltMed2KtRxTEY8\n8S0iGDze1VaGTBtQx3BomX+VbiaGzXqp+3BNukmTMhRp1G2QJpnZP3O8PChQBJ9J\nIHtU5D65cqdYaU0FNsGYZjHwe3HNClX+xmFxixDjAoGBAIr0bY+tax4BCfr6noSS\nXkt9MR6JtC7aNERdRmv6xtuiEFtk2T+/Yn0ymy+x/oR4KskuLdmvSxRZqI+3+y20\n+qPu9UlaOl4Vjyk5Jav+AV2FJngytrTJVa5D5xa4G74eEkM31ca/ijxUnAXpX7EC\nuY8NaDXe7uiKsNnQaLRXv7oY\n-----END PRIVATE KEY-----\n",
+  "client_email": "accountlookup@vertexone-398118.iam.gserviceaccount.com",
+  "client_id": "113853622196032247368",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/accountlookup%40vertexone-398118.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
