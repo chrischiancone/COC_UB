@@ -143,6 +143,7 @@ def index():
             <input type="text" id="legacy_account_number" name="legacy_account_number" required>
             <input type="submit" value="Lookup">
         </form>
+        <div id="existingAccount" style="margin-top: 20px;text-align: center;">Already have an account? Click <a href="https://myaccount.cityofcarrollton.com/">here</a> to log in.</div>
     </div>
 </body>
 </html>
