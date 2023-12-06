@@ -1,7 +1,5 @@
 from flask import Flask, request, render_template_string, flash, redirect
 from markupsafe import Markup
-from google.cloud import recaptchaenterprise_v1
-from google.cloud.recaptchaenterprise_v1 import Assessment
 import csv
 
 app = Flask(__name__)
