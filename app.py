@@ -131,7 +131,7 @@ def index():
     </script>
     <style>
         #submitButton:hover{
-            background-color: #4cae4c;
+            background-color: #4cae4c !important;
         }
     </style>
 </head>
