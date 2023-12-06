@@ -129,6 +129,11 @@ def index():
         document.getElementById("lookupForm").submit();
       }
     </script>
+    <style>
+        #submitButton:hover{
+            background-color: #4cae4c;
+        }
+    </style>
 </head>
 <body>
 
@@ -150,10 +155,10 @@ def index():
             <input type="submit" value="Lookup">
         </form>
         <div style="display: none">
-            <button class="g-recaptcha"
+            <button id="submitButton" class="g-recaptcha"
                 data-sitekey="6LeXfycpAAAAANQmIfdgF7BuhPfxXgMCTD7EgxNc"
                 data-callback='onSubmit'
-                data-action='submit'>Lookup</button>    
+                data-action='submit' style="background-color: #2f5d7a;color: white;width: 100%;height: 40px;border-radius: 5px;border: none;font-size: 1em;cursor: pointer;">Lookup</button>    
         </div>
         <div id="existingAccount" style="margin-top: 20px;text-align: center;">Already have an account? Click <a href="https://myaccount.cityofcarrollton.com/">here</a> to log in.</div>
     </div>
