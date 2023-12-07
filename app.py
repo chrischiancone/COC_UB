@@ -123,12 +123,6 @@ def index():
             text-align: center;
         }
     </style>
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeXfycpAAAAANQmIfdgF7BuhPfxXgMCTD7EgxNc"></script>
-    <script>
-      function onSubmit(token) {
-        document.getElementById("lookupForm").submit();
-      }
-    </script>
     <style>
         #submitButton:hover{
             background-color: #4cae4c !important;
